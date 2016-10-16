@@ -12,8 +12,6 @@ import CoreData
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableContainerView: UIView!
-    
-    var events = [NSManagedObject]()
     var eventsModelArray = [EventModel]()
     
     override func viewDidLoad() {

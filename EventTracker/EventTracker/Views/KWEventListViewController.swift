@@ -7,16 +7,37 @@
 //
 
 import UIKit
+import CoreData
 
 class KWEventListViewController: UITableViewController {
+    var events = [NSManagedObject]()
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appdelegate.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName:"Events")
+        
+        do {
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            events = results as! [NSManagedObject]
+        }
+        catch let error{
+            print("Could not fetch \(error)")
+        }
+        
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return events.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let customCell = tableView.dequeueReusableCellWithIdentifier("EventListCell", forIndexPath: indexPath)
-        customCell.textLabel?.text = "test"
+        let event = events[indexPath.row]
+        customCell.textLabel?.text = event.valueForKey("eventName") as? String
         return customCell
     }
 
