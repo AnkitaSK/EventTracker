@@ -18,11 +18,10 @@ class KWEventListViewController: UITableViewController {
         let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appdelegate.managedObjectContext
         
-        let fetchRequest = NSFetchRequest(entityName:"Events")
+        let fetchRequest = NSFetchRequest(entityName:"Event")
         
         do {
-            events.removeAll()
-            let results = try managedContext.executeFetchRequest(fetchRequest) as? [Events]
+            let results = try managedContext.executeFetchRequest(fetchRequest) as? [Event]
             events = results!
         }
         catch let error{

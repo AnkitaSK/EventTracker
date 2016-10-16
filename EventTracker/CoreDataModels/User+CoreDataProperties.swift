@@ -1,5 +1,5 @@
 //
-//  Events+CoreDataProperties.swift
+//  User+CoreDataProperties.swift
 //  EventTracker
 //
 //  Created by Ankita Kalangutkar on 10/16/16.
@@ -12,11 +12,8 @@
 import Foundation
 import CoreData
 
-extension Events {
+extension User {
 
-    @NSManaged var eventEntryType: String?
-    @NSManaged var eventId: NSNumber?
-    @NSManaged var eventName: String?
-    @NSManaged var eventPlace: String?
+    @NSManaged var userName: String?
 
 }
