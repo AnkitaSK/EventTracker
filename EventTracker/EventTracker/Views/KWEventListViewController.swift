@@ -21,8 +21,9 @@ class KWEventListViewController: UITableViewController {
         let fetchRequest = NSFetchRequest(entityName:"Events")
         
         do {
-            let results = try managedContext.executeFetchRequest(fetchRequest)
-            events = results as! [NSManagedObject]
+            events.removeAll()
+            let results = try managedContext.executeFetchRequest(fetchRequest) as? [Events]
+            events = results!
         }
         catch let error{
             print("Could not fetch \(error)")

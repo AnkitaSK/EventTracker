@@ -14,9 +14,9 @@ import CoreData
 
 extension Events {
 
-    @NSManaged var eventName: String?
-    @NSManaged var eventPlace: String?
     @NSManaged var eventEntryType: String?
     @NSManaged var eventId: NSNumber?
+    @NSManaged var eventName: String?
+    @NSManaged var eventPlace: String?
 
 }

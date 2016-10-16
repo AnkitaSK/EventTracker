@@ -136,6 +136,8 @@ class ViewController: UIViewController {
     func saveEvent(eventModel:EventModel) {
         let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appdelegate.managedObjectContext
+        managedContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        
         let eventEntity = NSEntityDescription.entityForName("Events", inManagedObjectContext: managedContext)
         let event = NSManagedObject(entity: eventEntity!, insertIntoManagedObjectContext: managedContext)
         

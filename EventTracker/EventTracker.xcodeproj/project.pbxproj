@@ -15,8 +15,8 @@
 		F6D4DFD01DB33C140068A7EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6D4DFCE1DB33C140068A7EB /* LaunchScreen.storyboard */; };
 		F6D4DFD91DB3431A0068A7EB /* KWEventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4DFD81DB3431A0068A7EB /* KWEventListViewController.swift */; };
 		F6D4DFE71DB368040068A7EB /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4DFE61DB368040068A7EB /* EventModel.swift */; };
-		F6D4DFEA1DB379550068A7EB /* Events+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4DFE81DB379550068A7EB /* Events+CoreDataProperties.swift */; };
-		F6D4DFEB1DB379550068A7EB /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4DFE91DB379550068A7EB /* Events.swift */; };
+		F6D4DFEE1DB38D010068A7EB /* Events+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4DFEC1DB38D010068A7EB /* Events+CoreDataProperties.swift */; };
+		F6D4DFEF1DB38D010068A7EB /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4DFED1DB38D010068A7EB /* Events.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		F6D4DFD11DB33C140068A7EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6D4DFD81DB3431A0068A7EB /* KWEventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KWEventListViewController.swift; path = Views/KWEventListViewController.swift; sourceTree = "<group>"; };
 		F6D4DFE61DB368040068A7EB /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventModel.swift; path = Model/EventModel.swift; sourceTree = SOURCE_ROOT; };
-		F6D4DFE81DB379550068A7EB /* Events+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Events+CoreDataProperties.swift"; path = "CoreDataModels/Events+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F6D4DFE91DB379550068A7EB /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Events.swift; path = CoreDataModels/Events.swift; sourceTree = "<group>"; };
+		F6D4DFEC1DB38D010068A7EB /* Events+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Events+CoreDataProperties.swift"; path = "CoreDataModels/Events+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F6D4DFED1DB38D010068A7EB /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Events.swift; path = CoreDataModels/Events.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +89,8 @@
 		F6D4DFDE1DB349440068A7EB /* CoreDataModels */ = {
 			isa = PBXGroup;
 			children = (
-				F6D4DFE81DB379550068A7EB /* Events+CoreDataProperties.swift */,
-				F6D4DFE91DB379550068A7EB /* Events.swift */,
+				F6D4DFEC1DB38D010068A7EB /* Events+CoreDataProperties.swift */,
+				F6D4DFED1DB38D010068A7EB /* Events.swift */,
 			);
 			name = CoreDataModels;
 			path = ..;
@@ -177,9 +177,9 @@
 			files = (
 				F6D4DFCB1DB33C140068A7EB /* EventTracker.xcdatamodeld in Sources */,
 				F6D4DFD91DB3431A0068A7EB /* KWEventListViewController.swift in Sources */,
-				F6D4DFEA1DB379550068A7EB /* Events+CoreDataProperties.swift in Sources */,
+				F6D4DFEE1DB38D010068A7EB /* Events+CoreDataProperties.swift in Sources */,
 				F6D4DFC51DB33C140068A7EB /* ViewController.swift in Sources */,
-				F6D4DFEB1DB379550068A7EB /* Events.swift in Sources */,
+				F6D4DFEF1DB38D010068A7EB /* Events.swift in Sources */,
 				F6D4DFE71DB368040068A7EB /* EventModel.swift in Sources */,
 				F6D4DFC31DB33C140068A7EB /* AppDelegate.swift in Sources */,
 			);
@@ -331,6 +331,7 @@
 				F6D4DFD61DB33C140068A7EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

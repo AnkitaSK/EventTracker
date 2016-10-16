@@ -8,6 +8,9 @@
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="eventId"/>
+                <constraint value="eventName"/>
+                <constraint value="eventPlace"/>
+                <constraint value="eventEntryType"/>
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
