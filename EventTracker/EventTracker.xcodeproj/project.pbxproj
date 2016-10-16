@@ -13,6 +13,7 @@
 		F6D4DFCB1DB33C140068A7EB /* EventTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6D4DFC91DB33C140068A7EB /* EventTracker.xcdatamodeld */; };
 		F6D4DFCD1DB33C140068A7EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6D4DFCC1DB33C140068A7EB /* Assets.xcassets */; };
 		F6D4DFD01DB33C140068A7EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6D4DFCE1DB33C140068A7EB /* LaunchScreen.storyboard */; };
+		F6D4DFD91DB3431A0068A7EB /* KWEventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4DFD81DB3431A0068A7EB /* KWEventListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F6D4DFCC1DB33C140068A7EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6D4DFCF1DB33C140068A7EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6D4DFD11DB33C140068A7EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6D4DFD81DB3431A0068A7EB /* KWEventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KWEventListViewController.swift; path = Views/KWEventListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		F6D4DFC11DB33C140068A7EB /* EventTracker */ = {
 			isa = PBXGroup;
 			children = (
+				F6D4DFD71DB342B60068A7EB /* Views */,
 				F6D4DFC21DB33C140068A7EB /* AppDelegate.swift */,
 				F6D4DFC41DB33C140068A7EB /* ViewController.swift */,
 				F6D4DFC61DB33C140068A7EB /* Main.storyboard */,
@@ -65,6 +68,14 @@
 				F6D4DFC91DB33C140068A7EB /* EventTracker.xcdatamodeld */,
 			);
 			path = EventTracker;
+			sourceTree = "<group>";
+		};
+		F6D4DFD71DB342B60068A7EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F6D4DFD81DB3431A0068A7EB /* KWEventListViewController.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6D4DFCB1DB33C140068A7EB /* EventTracker.xcdatamodeld in Sources */,
+				F6D4DFD91DB3431A0068A7EB /* KWEventListViewController.swift in Sources */,
 				F6D4DFC51DB33C140068A7EB /* ViewController.swift in Sources */,
 				F6D4DFC31DB33C140068A7EB /* AppDelegate.swift in Sources */,
 			);
