@@ -15,6 +15,8 @@ class KWEventTrackedListViewController: UITableViewController {
         super.viewDidLoad()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateList:", name: "updateTrackingList", object: nil)
+        
+        tableView.tableFooterView = UIView()
     }
     
     func updateList(notification:NSNotification) {

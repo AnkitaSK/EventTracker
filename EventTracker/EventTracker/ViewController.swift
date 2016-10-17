@@ -12,6 +12,8 @@ import CoreData
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableContainerView: UIView!
+    @IBOutlet weak var gridContainerView: UIView!
+    
     var eventsModelArray = [EventModel]()
     
     
@@ -34,6 +36,14 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func listViewButtonClicked(sender: UIButton) {
+        view.bringSubviewToFront(tableContainerView)
+    }
+    
+    @IBAction func gridViewButtonClicked(sender: UIButton) {
+        view.bringSubviewToFront(gridContainerView)
     }
     
     func creatingEventModels() {

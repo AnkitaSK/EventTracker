@@ -24,6 +24,9 @@
 		F6D4E03D1DB4F6120068A7EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E0391DB4F6120068A7EB /* User.swift */; };
 		F6D4E03E1DB4F6120068A7EB /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E03A1DB4F6120068A7EB /* Event+CoreDataProperties.swift */; };
 		F6D4E03F1DB4F6120068A7EB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E03B1DB4F6120068A7EB /* Event.swift */; };
+		F6D4E0411DB4FBA40068A7EB /* KWEventGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E0401DB4FBA40068A7EB /* KWEventGridViewController.swift */; };
+		F6D4E0431DB507300068A7EB /* KWEventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E0421DB507300068A7EB /* KWEventListCell.swift */; };
+		F6D4E0451DB50A760068A7EB /* KWEventGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E0441DB50A760068A7EB /* KWEventGridCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		F6D4E0391DB4F6120068A7EB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = CoreDataModels/User.swift; sourceTree = "<group>"; };
 		F6D4E03A1DB4F6120068A7EB /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Event+CoreDataProperties.swift"; path = "CoreDataModels/Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F6D4E03B1DB4F6120068A7EB /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = CoreDataModels/Event.swift; sourceTree = "<group>"; };
+		F6D4E0401DB4FBA40068A7EB /* KWEventGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KWEventGridViewController.swift; path = Views/KWEventGridViewController.swift; sourceTree = "<group>"; };
+		F6D4E0421DB507300068A7EB /* KWEventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KWEventListCell.swift; path = Views/KWEventListCell.swift; sourceTree = "<group>"; };
+		F6D4E0441DB50A760068A7EB /* KWEventGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KWEventGridCell.swift; path = Views/KWEventGridCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 				F6D4DFD81DB3431A0068A7EB /* KWEventListViewController.swift */,
 				F6D4E02A1DB49ABC0068A7EB /* KWEventTrackedListViewController.swift */,
 				F6D4E0341DB4AB740068A7EB /* KWDetailViewController.swift */,
+				F6D4E0401DB4FBA40068A7EB /* KWEventGridViewController.swift */,
+				F6D4E0421DB507300068A7EB /* KWEventListCell.swift */,
+				F6D4E0441DB50A760068A7EB /* KWEventGridCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -196,6 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D4E0451DB50A760068A7EB /* KWEventGridCell.swift in Sources */,
+				F6D4E0431DB507300068A7EB /* KWEventListCell.swift in Sources */,
 				F6D4DFCB1DB33C140068A7EB /* EventTracker.xcdatamodeld in Sources */,
 				F6D4DFD91DB3431A0068A7EB /* KWEventListViewController.swift in Sources */,
 				F6D4DFC51DB33C140068A7EB /* ViewController.swift in Sources */,
@@ -210,6 +221,7 @@
 				F6D4E02B1DB49ABC0068A7EB /* KWEventTrackedListViewController.swift in Sources */,
 				F6D4E03F1DB4F6120068A7EB /* Event.swift in Sources */,
 				F6D4E0251DB4797C0068A7EB /* MainViewController.swift in Sources */,
+				F6D4E0411DB4FBA40068A7EB /* KWEventGridViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
