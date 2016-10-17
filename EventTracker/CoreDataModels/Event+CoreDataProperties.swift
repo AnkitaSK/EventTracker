@@ -1,8 +1,8 @@
 //
-//  Events+CoreDataProperties.swift
+//  Event+CoreDataProperties.swift
 //  EventTracker
 //
-//  Created by Ankita Kalangutkar on 10/16/16.
+//  Created by Ankita Kalangutkar on 10/17/16.
 //  Copyright © 2016 Ankita Kalangutkar. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -18,5 +18,6 @@ extension Event {
     @NSManaged var eventId: NSNumber?
     @NSManaged var eventName: String?
     @NSManaged var eventPlace: String?
+    @NSManaged var users: NSSet?
 
 }

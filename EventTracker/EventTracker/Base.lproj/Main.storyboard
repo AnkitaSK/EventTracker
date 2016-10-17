@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -113,6 +114,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m37-SJ-uHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2452" y="921"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="vlW-Cu-AKe">
+            <objects>
+                <viewController storyboardIdentifier="KWDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3bU-7A-m1g" customClass="KWDetailViewController" customModule="EventTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I1B-V5-sTd"/>
+                        <viewControllerLayoutGuide type="bottom" id="UGo-Vr-wEr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CpB-TV-ed5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebi-Ac-bey">
+                                <rect key="frame" x="520" y="28" width="39" height="30"/>
+                                <state key="normal" title="Track"/>
+                                <connections>
+                                    <action selector="trackEventButtonclicked:" destination="3bU-7A-m1g" eventType="touchUpInside" id="tGB-kP-DsY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ebi-Ac-bey" secondAttribute="trailing" constant="21" id="YYc-Ao-ETB"/>
+                            <constraint firstItem="Ebi-Ac-bey" firstAttribute="top" secondItem="I1B-V5-sTd" secondAttribute="bottom" constant="8" id="lKE-NF-QyA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Msm-ei-ZYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3254" y="764"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cir-sC-uIk">

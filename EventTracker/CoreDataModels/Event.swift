@@ -1,8 +1,8 @@
 //
-//  Events.swift
+//  Event.swift
 //  EventTracker
 //
-//  Created by Ankita Kalangutkar on 10/16/16.
+//  Created by Ankita Kalangutkar on 10/17/16.
 //  Copyright © 2016 Ankita Kalangutkar. All rights reserved.
 //
 

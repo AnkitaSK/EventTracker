@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  EventTracker
 //
-//  Created by Ankita Kalangutkar on 10/16/16.
+//  Created by Ankita Kalangutkar on 10/17/16.
 //  Copyright © 2016 Ankita Kalangutkar. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,5 +15,6 @@ import CoreData
 extension User {
 
     @NSManaged var userName: String?
+    @NSManaged var events: NSSet?
 
 }

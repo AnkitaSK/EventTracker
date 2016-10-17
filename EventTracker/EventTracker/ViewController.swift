@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableContainerView: UIView!
     var eventsModelArray = [EventModel]()
-    var alert:UIAlertController?
+    
     
     var movePanel:((movePanel:Bool) ->Void)?
     
@@ -26,7 +26,8 @@ class ViewController: UIViewController {
             saveEvent(event)
         }
         
-//        addName()
+
+//        fetchRelationData()
     }
 
     @IBAction func slideButtonClicked(sender: UIBarButtonItem) {
@@ -37,43 +38,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func addName () {
-        alert = UIAlertController(title: "Enter your Name", message: "", preferredStyle: .Alert)
-        let saveAction = UIAlertAction(title: "Save",
-            style: .Default,
-            handler: { (action:UIAlertAction) -> Void in
-                
-                let textField = self.alert!.textFields!.first
-                self.saveUser((textField?.text)!)
-                
-        })
-        
-        alert!.addTextFieldWithConfigurationHandler { (textField:UITextField) -> Void in
-            textField.addTarget(self, action: "textChanged:", forControlEvents: .EditingChanged)
-        }
-        
-        
-        alert!.addAction(saveAction)
-        (alert!.actions[0] as UIAlertAction).enabled = false
-        
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.presentViewController(self.alert!, animated: true, completion: nil)
-        })
-        
-    }
-    
-    func textChanged(sender:AnyObject) {
-        let textField = sender as! UITextField
-        var responder:UIResponder = textField
-        while !(responder is UIAlertController) {
-            responder = responder.nextResponder()!
-        }
-        let alert = responder as! UIAlertController
-//        saveUser((textField.text)!)
-        (alert.actions[0] as UIAlertAction).enabled = (textField.text != "" && textField.text?.characters.count > 3)
-    }
-
-
     func creatingEventModels() {
         let event1 = EventModel(attributes:
             [
@@ -177,29 +141,7 @@ class ViewController: UIViewController {
         
     }
     
-    func saveUser(name:String) {
-        let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appdelegate.managedObjectContext
-//        managedContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
-        
-        let userEntity = NSEntityDescription.entityForName("User", inManagedObjectContext: managedContext)
-        let user = NSManagedObject(entity: userEntity!, insertIntoManagedObjectContext: managedContext)
-        
-        user.setValue(name, forKey: "userName")
-        
-        do {
-            try managedContext.save()
-        }
-        catch let error {
-            print("Could not save \(error)")
-//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//                self.alert?.message = "Name already exists,Enter different name"
-//                self.presentViewController(self.alert!, animated: true, completion: nil)
-//            })
-            
-        }
-
-    }
+    
     
     func saveEvent(eventModel:EventModel) {
         let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate

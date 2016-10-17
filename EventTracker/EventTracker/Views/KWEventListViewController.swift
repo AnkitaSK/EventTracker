@@ -41,4 +41,11 @@ class KWEventListViewController: UITableViewController {
         return customCell
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let event = events[indexPath.row]
+        
+        let detailViewController:KWDetailViewController = (storyboard?.instantiateViewControllerWithIdentifier("KWDetailViewController") as? KWDetailViewController)!
+        detailViewController.eventData = event
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }

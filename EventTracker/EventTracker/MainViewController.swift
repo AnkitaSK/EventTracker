@@ -88,6 +88,5 @@ class MainViewController: UIViewController {
                 self.showPanel = false
         }
     }
-
 }
 
