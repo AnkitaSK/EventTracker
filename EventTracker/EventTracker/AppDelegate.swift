@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         let alert = responder as! UIAlertController
         //        saveUser((textField.text)!)
-        (alert.actions[0] as UIAlertAction).enabled = (textField.text != "" && textField.text?.characters.count > 3)
+        (alert.actions[0] as UIAlertAction).enabled = (textField.text != "" && textField.text?.characters.count > 0)
     }
     
     func checkForUserName(name:String) -> NSManagedObject? {

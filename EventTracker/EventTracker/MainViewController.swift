@@ -30,17 +30,12 @@ class MainViewController: UIViewController {
     }
     
     func handleEdgeSwipe(gesture:UIScreenEdgePanGestureRecognizer) {
-//        let velocity = gesture.velocityInView(gesture.view)
         moveToRight()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    @IBAction func openSlider(sender: UIBarButtonItem) {
-        moveToRight()
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
