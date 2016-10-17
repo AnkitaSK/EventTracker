@@ -65,7 +65,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yI4-fe-gnY">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="Bsg-vo-d8g">
+                        <barButtonItem key="leftBarButtonItem" title="Tracked Events" id="Bsg-vo-d8g">
+                            <color key="tintColor" red="0.29411764709999999" green="0.59215686270000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="slideButtonClicked:" destination="BYZ-38-t0r" id="4Bg-GI-Lfo"/>
                             </connections>
@@ -103,19 +104,19 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUn-DC-4ud">
-                                            <rect key="frame" x="8" y="101" width="42" height="21"/>
+                                            <rect key="frame" x="8" y="101" width="42" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQC-rT-Xvm">
-                                            <rect key="frame" x="100" y="121" width="42" height="21"/>
+                                            <rect key="frame" x="100" y="121" width="42" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVr-xJ-GHH">
-                                            <rect key="frame" x="8" y="15" width="134" height="72"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVr-xJ-GHH">
+                                            <rect key="frame" x="8" y="15" width="134" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -254,19 +255,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebi-Ac-bey">
-                                <rect key="frame" x="520" y="28" width="39" height="30"/>
-                                <state key="normal" title="Track"/>
+                                <rect key="frame" x="520" y="45" width="39" height="30"/>
+                                <state key="normal" title="Track">
+                                    <color key="titleColor" red="0.058823529409999999" green="0.3803921569" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.79887952299999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="trackEventButtonclicked:" destination="3bU-7A-m1g" eventType="touchUpInside" id="tGB-kP-DsY"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunny" translatesAutoresizingMaskIntoConstraints="NO" id="cPD-4r-rad">
+                                <rect key="frame" x="218" y="45" width="128" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIr-xR-t3h">
+                                <rect key="frame" x="258" y="205" width="49" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9j-gG-PzZ">
+                                <rect key="frame" x="519.5" y="98" width="41.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9J-eX-XeM">
+                                <rect key="frame" x="258" y="253" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="cPD-4r-rad" firstAttribute="centerX" secondItem="CpB-TV-ed5" secondAttribute="centerX" constant="-18" id="92d-za-yu0"/>
+                            <constraint firstItem="N9J-eX-XeM" firstAttribute="top" secondItem="wIr-xR-t3h" secondAttribute="bottom" constant="24.5" id="KiD-yR-9cS"/>
+                            <constraint firstItem="wIr-xR-t3h" firstAttribute="centerX" secondItem="cPD-4r-rad" secondAttribute="centerX" id="Rcw-7P-9DA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ebi-Ac-bey" secondAttribute="trailing" constant="21" id="YYc-Ao-ETB"/>
-                            <constraint firstItem="Ebi-Ac-bey" firstAttribute="top" secondItem="I1B-V5-sTd" secondAttribute="bottom" constant="8" id="lKE-NF-QyA"/>
+                            <constraint firstItem="Z9j-gG-PzZ" firstAttribute="top" secondItem="Ebi-Ac-bey" secondAttribute="bottom" constant="23" id="ZA4-re-wDb"/>
+                            <constraint firstAttribute="trailing" secondItem="Z9j-gG-PzZ" secondAttribute="trailing" constant="39" id="gk8-Kz-Lrv"/>
+                            <constraint firstItem="N9J-eX-XeM" firstAttribute="centerX" secondItem="wIr-xR-t3h" secondAttribute="centerX" constant="-3" id="lC5-uA-2hl"/>
+                            <constraint firstItem="Ebi-Ac-bey" firstAttribute="top" secondItem="I1B-V5-sTd" secondAttribute="bottom" constant="25" id="lKE-NF-QyA"/>
+                            <constraint firstItem="cPD-4r-rad" firstAttribute="top" secondItem="I1B-V5-sTd" secondAttribute="bottom" constant="25" id="nu9-o9-4gD"/>
+                            <constraint firstItem="wIr-xR-t3h" firstAttribute="top" secondItem="cPD-4r-rad" secondAttribute="bottom" constant="32" id="r8O-GI-GRV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eventNameLabel" destination="wIr-xR-t3h" id="Pvx-Aw-Zd9"/>
+                        <outlet property="eventPlaceLabel" destination="N9J-eX-XeM" id="Fe4-mE-7po"/>
+                        <outlet property="eventTrackButton" destination="Ebi-Ac-bey" id="H5c-pR-HA5"/>
+                        <outlet property="eventTypeLabel" destination="Z9j-gG-PzZ" id="QLw-gM-gkQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Msm-ei-ZYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -351,6 +390,7 @@
     </scenes>
     <resources>
         <image name="list" width="32" height="32"/>
+        <image name="sunny" width="128" height="128"/>
         <image name="visualization" width="32" height="32"/>
     </resources>
 </document>
