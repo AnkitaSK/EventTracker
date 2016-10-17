@@ -18,6 +18,5 @@ extension Event {
     @NSManaged var eventId: NSNumber?
     @NSManaged var eventName: String?
     @NSManaged var eventPlace: String?
-    @NSManaged var users: NSSet?
 
 }
