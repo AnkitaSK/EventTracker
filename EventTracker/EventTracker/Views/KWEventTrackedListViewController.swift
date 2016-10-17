@@ -35,4 +35,26 @@ class KWEventTrackedListViewController: UITableViewController {
         return customCell
     }
     
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            let event = events[indexPath.row]
+            
+            let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let managedContext = appdelegate.managedObjectContext
+            managedContext.deleteObject(event)
+            do {
+                try managedContext.save()
+                events.removeAtIndex(indexPath.row)
+                tableView.reloadData()
+            }
+            catch let error {
+                print("Could not delete \(error)")
+            }
+        }
+    }
+    
 }
