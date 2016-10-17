@@ -25,9 +25,11 @@ class KWEventListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let customCell = tableView.dequeueReusableCellWithIdentifier("EventListCell", forIndexPath: indexPath)
+        let customCell:KWEventListCell = tableView.dequeueReusableCellWithIdentifier("EventListCell", forIndexPath: indexPath) as! KWEventListCell
         let event = events[indexPath.row]
-        customCell.textLabel?.text = event.valueForKey("eventName") as? String
+        customCell.eventNameLabel.text = event.valueForKey("eventName") as? String
+        customCell.eventPlaceLabel.text = event.valueForKey("eventPlace") as? String
+        customCell.eventTypeLabel.text = event.valueForKey("eventEntryType") as? String
         return customCell
     }
 
