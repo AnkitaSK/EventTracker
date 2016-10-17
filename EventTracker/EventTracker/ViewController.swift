@@ -28,6 +28,16 @@ class ViewController: UIViewController {
             DatabaseManager.sharedManager.saveEvent(event)
         }
 
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "gotoDetailScreen:", name: "triggerDetailScreen", object: nil)
+    }
+    
+    func gotoDetailScreen(notification:NSNotification) {
+        let dict = notification.object as! NSDictionary
+        let event = dict["event"] as! NSManagedObject
+        
+        let detailViewController:KWDetailViewController = (storyboard?.instantiateViewControllerWithIdentifier("KWDetailViewController") as? KWDetailViewController)!
+        detailViewController.eventData = event
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 
     @IBAction func slideButtonClicked(sender: UIBarButtonItem) {
