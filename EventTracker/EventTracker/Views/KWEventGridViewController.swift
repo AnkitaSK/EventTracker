@@ -21,11 +21,15 @@ class KWEventGridViewController: UICollectionViewController {
     }
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return events.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let customCell:UICollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("GridEventCell", forIndexPath: indexPath)
+        let customCell:KWEventGridCell = collectionView.dequeueReusableCellWithReuseIdentifier("GridEventCell", forIndexPath: indexPath) as! KWEventGridCell
+        let event = events[indexPath.row]
+        customCell.gridEventNameLabel.text = event.valueForKey("eventName") as? String
+        customCell.gridEventPlaceLabel.text = event.valueForKey("eventPlace") as? String
+        customCell.gridEventTypeLabel.text = event.valueForKey("eventEntryType") as? String
         return customCell
     }
     
