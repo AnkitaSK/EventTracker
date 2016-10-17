@@ -34,6 +34,10 @@ class KWEventGridViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let event = events[indexPath.row]
         
+        let detailViewController:KWDetailViewController = (storyboard?.instantiateViewControllerWithIdentifier("KWDetailViewController") as? KWDetailViewController)!
+        detailViewController.eventData = event
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
