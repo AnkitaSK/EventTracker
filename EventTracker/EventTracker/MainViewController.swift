@@ -60,6 +60,13 @@ class MainViewController: UIViewController {
         }
         if segue.identifier == "LeftSegue" {
             leftVC = segue.destinationViewController as? LeftViewController
+            leftVC?.movePanelToOrigin = {[weak self] event in
+                if let weakSelf = self {
+                    weakSelf.moveToLeft()
+                    let dictionary = ["event" : event]
+                    NSNotificationCenter.defaultCenter().postNotificationName("triggerDetailScreen", object: dictionary)
+                }
+            }
         }
     }
     

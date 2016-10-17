@@ -11,6 +11,8 @@ import CoreData
 
 class KWEventTrackedListViewController: UITableViewController {
     var events = [NSManagedObject]()
+    var movePanel:((moveToOrigin:Bool,event:NSManagedObject) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,4 +61,13 @@ class KWEventTrackedListViewController: UITableViewController {
         }
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let event = events[indexPath.row]
+        movePanel!(moveToOrigin: true,event: event)
+//
+//        let detailViewController:KWDetailViewController = (storyboard?.instantiateViewControllerWithIdentifier("KWDetailViewController") as? KWDetailViewController)!
+//        detailViewController.eventData = event
+//        navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }
