@@ -15,19 +15,7 @@ class KWEventListViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appdelegate.managedObjectContext
-        
-        let fetchRequest = NSFetchRequest(entityName:"Event")
-        
-        do {
-            let results = try managedContext.executeFetchRequest(fetchRequest) as? [Event]
-            events = results!
-        }
-        catch let error{
-            print("Could not fetch \(error)")
-        }
-        
+        events = DatabaseManager.sharedManager.fetchEvents()!
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

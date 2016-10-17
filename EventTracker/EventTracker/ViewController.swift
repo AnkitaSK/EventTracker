@@ -23,11 +23,9 @@ class ViewController: UIViewController {
         creatingEventModels()
         
         for event in eventsModelArray {
-            saveEvent(event)
+            DatabaseManager.sharedManager.saveEvent(event)
         }
-        
 
-//        fetchRelationData()
     }
 
     @IBAction func slideButtonClicked(sender: UIBarButtonItem) {
@@ -140,29 +138,7 @@ class ViewController: UIViewController {
         eventsModelArray.append(event10)
         
     }
-    
-    
-    
-    func saveEvent(eventModel:EventModel) {
-        let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appdelegate.managedObjectContext
-        managedContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
-        
-        let eventEntity = NSEntityDescription.entityForName("Event", inManagedObjectContext: managedContext)
-        let event = NSManagedObject(entity: eventEntity!, insertIntoManagedObjectContext: managedContext)
-        
-        event.setValue(eventModel.name, forKey: "eventName")
-        event.setValue(eventModel.id, forKey: "eventId")
-        event.setValue(eventModel.place, forKey: "eventPlace")
-        event.setValue(eventModel.entryType, forKey: "eventEntryType")
-        
-        do {
-            try managedContext.save()
-        }
-        catch let error {
-            print("Could not save \(error)")
-        }
-    }
+
     
 }
 

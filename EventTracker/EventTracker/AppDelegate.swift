@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var alert:UIAlertController?
     var user:NSManagedObject?
     
+    
+    
     func addName () {
         alert = UIAlertController(title: "Enter your Name", message: "", preferredStyle: .Alert)
         let saveAction = UIAlertAction(title: "Save",
@@ -51,23 +53,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //        saveUser((textField.text)!)
         (alert.actions[0] as UIAlertAction).enabled = (textField.text != "" && textField.text?.characters.count > 3)
     }
+    
+    func checkForUserName(name:String) -> NSManagedObject? {
+        
+        let fetchRequest = NSFetchRequest(entityName: "User")
+        let predicate = NSPredicate(format:"userName == %@", name)
+        fetchRequest.predicate = predicate
+        do {
+        let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [User]
+        if fetchResults!.count > 0 {
+            user = fetchResults![0]
+            
+            return user!
+        }
+        }
+        catch let error{
+            print("Could not fetch \(error)")
+        }
+        
+        return user
+    }
 
     func saveUser(name:String) {
-        let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appdelegate.managedObjectContext
         
-        let userEntity = NSEntityDescription.entityForName("User", inManagedObjectContext: managedContext)
-        user = NSManagedObject(entity: userEntity!, insertIntoManagedObjectContext: managedContext)
-        
-        user!.setValue(name, forKey: "userName")
-        
-        do {
-            try managedContext.save()
+        if checkForUserName(name) == nil {
+            let userEntity = NSEntityDescription.entityForName("User", inManagedObjectContext: managedObjectContext)
+            user = NSManagedObject(entity: userEntity!, insertIntoManagedObjectContext: managedObjectContext)
+            
+            user!.setValue(name, forKey: "userName")
+            
+            do {
+                try managedObjectContext.save()
+            }
+            catch let error {
+                print("Could not save \(error)")
+            }
         }
-        catch let error {
-            print("Could not save \(error)")
-        }
-        
+
+        DatabaseManager.sharedManager.fetchRelationData()
     }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

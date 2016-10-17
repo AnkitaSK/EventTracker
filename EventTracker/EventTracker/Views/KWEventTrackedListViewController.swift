@@ -31,7 +31,6 @@ class KWEventTrackedListViewController: UITableViewController {
         let customCell = tableView.dequeueReusableCellWithIdentifier("TrackedEventCell", forIndexPath: indexPath)
         let event = events[indexPath.row]
         customCell.textLabel?.text = event.valueForKey("eventName") as? String
-//        customCell.textLabel?.text = "Tracked event"
         return customCell
     }
     
@@ -43,17 +42,18 @@ class KWEventTrackedListViewController: UITableViewController {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             let event = events[indexPath.row]
             
-            let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            let managedContext = appdelegate.managedObjectContext
-            managedContext.deleteObject(event)
-            do {
-                try managedContext.save()
-                events.removeAtIndex(indexPath.row)
-                tableView.reloadData()
-            }
-            catch let error {
-                print("Could not delete \(error)")
-            }
+            DatabaseManager.sharedManager.deleteEvent(event, completionHandler: { [weak self](success) -> Void in
+                if success == true {
+                    // completion
+                    if let weakSelf = self {
+                        weakSelf.events.removeAtIndex(indexPath.row)
+                        weakSelf.tableView.reloadData()
+                    }
+                    
+                }
+                
+            })
+
         }
     }
     

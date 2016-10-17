@@ -23,6 +23,7 @@
 		F6D4E0321DB4A8E00068A7EB /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E02E1DB4A8E00068A7EB /* User+CoreDataProperties.swift */; };
 		F6D4E0331DB4A8E00068A7EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E02F1DB4A8E00068A7EB /* User.swift */; };
 		F6D4E0351DB4AB740068A7EB /* KWDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E0341DB4AB740068A7EB /* KWDetailViewController.swift */; };
+		F6D4E0371DB4E5F40068A7EB /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E0361DB4E5F40068A7EB /* DatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F6D4E02E1DB4A8E00068A7EB /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "CoreDataModels/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F6D4E02F1DB4A8E00068A7EB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = CoreDataModels/User.swift; sourceTree = "<group>"; };
 		F6D4E0341DB4AB740068A7EB /* KWDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KWDetailViewController.swift; path = Views/KWDetailViewController.swift; sourceTree = "<group>"; };
+		F6D4E0361DB4E5F40068A7EB /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseManager.swift; path = Model/DatabaseManager.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				F6D4DFE61DB368040068A7EB /* EventModel.swift */,
+				F6D4E0361DB4E5F40068A7EB /* DatabaseManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				F6D4DFC51DB33C140068A7EB /* ViewController.swift in Sources */,
 				F6D4E0311DB4A8E00068A7EB /* Event.swift in Sources */,
 				F6D4E0351DB4AB740068A7EB /* KWDetailViewController.swift in Sources */,
+				F6D4E0371DB4E5F40068A7EB /* DatabaseManager.swift in Sources */,
 				F6D4DFE71DB368040068A7EB /* EventModel.swift in Sources */,
 				F6D4E0271DB4797C0068A7EB /* LeftViewController.swift in Sources */,
 				F6D4E0321DB4A8E00068A7EB /* User+CoreDataProperties.swift in Sources */,
