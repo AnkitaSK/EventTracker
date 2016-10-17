@@ -11,8 +11,10 @@ import CoreData
 
 class KWEventGridViewController: UICollectionViewController {
     var events = [NSManagedObject]()
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
         events = DatabaseManager.sharedManager.fetchEvents()!
     }
     
