@@ -72,6 +72,9 @@ class MainViewController: UIViewController {
         UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.BeginFromCurrentState, animations: { () -> Void in
             self.rightView.frame = CGRectMake(0, 0, 500, self.rightView.frame.size.height)
             self.centerView.frame = CGRectMake(500, self.centerView.frame.origin.y, self.centerView.frame.size.width,self.self.centerView.frame.size.height)
+            
+            self.leftVC!.eventTrackingViewController?.view.frame = CGRectMake(0, 64, (self.leftVC?.view.frame.size.width)!
+                , (self.leftVC?.view.frame.size.height)!)
             }) { (finished) -> Void in
               self.showPanel = true
         }

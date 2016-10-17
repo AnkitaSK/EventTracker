@@ -20,8 +20,8 @@
 		F6D4DFFA1DB39ED90068A7EB /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4DFF81DB39ED90068A7EB /* User+CoreDataProperties.swift */; };
 		F6D4DFFB1DB39ED90068A7EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4DFF91DB39ED90068A7EB /* User.swift */; };
 		F6D4E0251DB4797C0068A7EB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E0221DB4797C0068A7EB /* MainViewController.swift */; };
-		F6D4E0261DB4797C0068A7EB /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E0231DB4797C0068A7EB /* CenterViewController.swift */; };
 		F6D4E0271DB4797C0068A7EB /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E0241DB4797C0068A7EB /* LeftViewController.swift */; };
+		F6D4E02B1DB49ABC0068A7EB /* KWEventTrackedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E02A1DB49ABC0068A7EB /* KWEventTrackedListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +40,8 @@
 		F6D4DFF81DB39ED90068A7EB /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "CoreDataModels/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F6D4DFF91DB39ED90068A7EB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = CoreDataModels/User.swift; sourceTree = "<group>"; };
 		F6D4E0221DB4797C0068A7EB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		F6D4E0231DB4797C0068A7EB /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		F6D4E0241DB4797C0068A7EB /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		F6D4E02A1DB49ABC0068A7EB /* KWEventTrackedListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KWEventTrackedListViewController.swift; path = Views/KWEventTrackedListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,6 @@
 				F6D4DFC21DB33C140068A7EB /* AppDelegate.swift */,
 				F6D4DFC41DB33C140068A7EB /* ViewController.swift */,
 				F6D4E0221DB4797C0068A7EB /* MainViewController.swift */,
-				F6D4E0231DB4797C0068A7EB /* CenterViewController.swift */,
 				F6D4E0241DB4797C0068A7EB /* LeftViewController.swift */,
 				F6D4DFC61DB33C140068A7EB /* Main.storyboard */,
 				F6D4DFCC1DB33C140068A7EB /* Assets.xcassets */,
@@ -95,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				F6D4DFD81DB3431A0068A7EB /* KWEventListViewController.swift */,
+				F6D4E02A1DB49ABC0068A7EB /* KWEventTrackedListViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -198,9 +198,9 @@
 				F6D4DFFB1DB39ED90068A7EB /* User.swift in Sources */,
 				F6D4DFF31DB397F80068A7EB /* Event.swift in Sources */,
 				F6D4DFE71DB368040068A7EB /* EventModel.swift in Sources */,
-				F6D4E0261DB4797C0068A7EB /* CenterViewController.swift in Sources */,
 				F6D4E0271DB4797C0068A7EB /* LeftViewController.swift in Sources */,
 				F6D4DFC31DB33C140068A7EB /* AppDelegate.swift in Sources */,
+				F6D4E02B1DB49ABC0068A7EB /* KWEventTrackedListViewController.swift in Sources */,
 				F6D4E0251DB4797C0068A7EB /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
