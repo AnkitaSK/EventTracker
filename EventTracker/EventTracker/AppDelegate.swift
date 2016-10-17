@@ -13,10 +13,89 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var alert:UIAlertController?
+    var user:NSManagedObject?
+    
+    
+    
+    func addName () {
+        alert = UIAlertController(title: "Enter your Name", message: "", preferredStyle: .Alert)
+        let saveAction = UIAlertAction(title: "Save",
+            style: .Default,
+            handler: { (action:UIAlertAction) -> Void in
+                
+                let textField = self.alert!.textFields!.first
+                self.saveUser((textField?.text)!)
+                
+        })
+        
+        alert!.addTextFieldWithConfigurationHandler { (textField:UITextField) -> Void in
+            textField.addTarget(self, action: "textChanged:", forControlEvents: .EditingChanged)
+        }
+        
+        
+        alert!.addAction(saveAction)
+        (alert!.actions[0] as UIAlertAction).enabled = false
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.window?.rootViewController?.presentViewController(self.alert!, animated: true, completion: nil)
+        })
+        
+    }
+    
+    func textChanged(sender:AnyObject) {
+        let textField = sender as! UITextField
+        var responder:UIResponder = textField
+        while !(responder is UIAlertController) {
+            responder = responder.nextResponder()!
+        }
+        let alert = responder as! UIAlertController
+        //        saveUser((textField.text)!)
+        (alert.actions[0] as UIAlertAction).enabled = (textField.text != "" && textField.text?.characters.count > 3)
+    }
+    
+    func checkForUserName(name:String) -> NSManagedObject? {
+        
+        let fetchRequest = NSFetchRequest(entityName: "User")
+        let predicate = NSPredicate(format:"userName == %@", name)
+        fetchRequest.predicate = predicate
+        do {
+        let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [User]
+        if fetchResults!.count > 0 {
+            user = fetchResults![0]
+            
+            return user!
+        }
+        }
+        catch let error{
+            print("Could not fetch \(error)")
+        }
+        
+        return user
+    }
 
+    func saveUser(name:String) {
+        
+        if checkForUserName(name) == nil {
+            let userEntity = NSEntityDescription.entityForName("User", inManagedObjectContext: managedObjectContext)
+            user = NSManagedObject(entity: userEntity!, insertIntoManagedObjectContext: managedObjectContext)
+            
+            user!.setValue(name, forKey: "userName")
+            
+            do {
+                try managedObjectContext.save()
+            }
+            catch let error {
+                print("Could not save \(error)")
+            }
+        }
 
+        DatabaseManager.sharedManager.fetchRelationData()
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        addName()
         return true
     }
 
@@ -62,7 +141,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite")
+        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("EventTrackerCoreData.sqlite")
         var failureReason = "There was an error creating or loading the application's saved data."
         do {
             try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)

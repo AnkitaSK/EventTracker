@@ -13,6 +13,17 @@
 		F6D4DFCB1DB33C140068A7EB /* EventTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6D4DFC91DB33C140068A7EB /* EventTracker.xcdatamodeld */; };
 		F6D4DFCD1DB33C140068A7EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6D4DFCC1DB33C140068A7EB /* Assets.xcassets */; };
 		F6D4DFD01DB33C140068A7EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6D4DFCE1DB33C140068A7EB /* LaunchScreen.storyboard */; };
+		F6D4DFD91DB3431A0068A7EB /* KWEventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4DFD81DB3431A0068A7EB /* KWEventListViewController.swift */; };
+		F6D4DFE71DB368040068A7EB /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4DFE61DB368040068A7EB /* EventModel.swift */; };
+		F6D4E0251DB4797C0068A7EB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E0221DB4797C0068A7EB /* MainViewController.swift */; };
+		F6D4E0271DB4797C0068A7EB /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E0241DB4797C0068A7EB /* LeftViewController.swift */; };
+		F6D4E02B1DB49ABC0068A7EB /* KWEventTrackedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E02A1DB49ABC0068A7EB /* KWEventTrackedListViewController.swift */; };
+		F6D4E0351DB4AB740068A7EB /* KWDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E0341DB4AB740068A7EB /* KWDetailViewController.swift */; };
+		F6D4E0371DB4E5F40068A7EB /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E0361DB4E5F40068A7EB /* DatabaseManager.swift */; };
+		F6D4E03C1DB4F6120068A7EB /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E0381DB4F6120068A7EB /* User+CoreDataProperties.swift */; };
+		F6D4E03D1DB4F6120068A7EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E0391DB4F6120068A7EB /* User.swift */; };
+		F6D4E03E1DB4F6120068A7EB /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E03A1DB4F6120068A7EB /* Event+CoreDataProperties.swift */; };
+		F6D4E03F1DB4F6120068A7EB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4E03B1DB4F6120068A7EB /* Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +35,17 @@
 		F6D4DFCC1DB33C140068A7EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6D4DFCF1DB33C140068A7EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6D4DFD11DB33C140068A7EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6D4DFD81DB3431A0068A7EB /* KWEventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KWEventListViewController.swift; path = Views/KWEventListViewController.swift; sourceTree = "<group>"; };
+		F6D4DFE61DB368040068A7EB /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventModel.swift; path = Model/EventModel.swift; sourceTree = SOURCE_ROOT; };
+		F6D4E0221DB4797C0068A7EB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F6D4E0241DB4797C0068A7EB /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		F6D4E02A1DB49ABC0068A7EB /* KWEventTrackedListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KWEventTrackedListViewController.swift; path = Views/KWEventTrackedListViewController.swift; sourceTree = "<group>"; };
+		F6D4E0341DB4AB740068A7EB /* KWDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KWDetailViewController.swift; path = Views/KWDetailViewController.swift; sourceTree = "<group>"; };
+		F6D4E0361DB4E5F40068A7EB /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseManager.swift; path = Model/DatabaseManager.swift; sourceTree = SOURCE_ROOT; };
+		F6D4E0381DB4F6120068A7EB /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "CoreDataModels/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F6D4E0391DB4F6120068A7EB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = CoreDataModels/User.swift; sourceTree = "<group>"; };
+		F6D4E03A1DB4F6120068A7EB /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Event+CoreDataProperties.swift"; path = "CoreDataModels/Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F6D4E03B1DB4F6120068A7EB /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = CoreDataModels/Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +78,13 @@
 		F6D4DFC11DB33C140068A7EB /* EventTracker */ = {
 			isa = PBXGroup;
 			children = (
+				F6D4DFE51DB367DB0068A7EB /* Model */,
+				F6D4DFDE1DB349440068A7EB /* CoreDataModels */,
+				F6D4DFD71DB342B60068A7EB /* Views */,
 				F6D4DFC21DB33C140068A7EB /* AppDelegate.swift */,
 				F6D4DFC41DB33C140068A7EB /* ViewController.swift */,
+				F6D4E0221DB4797C0068A7EB /* MainViewController.swift */,
+				F6D4E0241DB4797C0068A7EB /* LeftViewController.swift */,
 				F6D4DFC61DB33C140068A7EB /* Main.storyboard */,
 				F6D4DFCC1DB33C140068A7EB /* Assets.xcassets */,
 				F6D4DFCE1DB33C140068A7EB /* LaunchScreen.storyboard */,
@@ -65,6 +92,37 @@
 				F6D4DFC91DB33C140068A7EB /* EventTracker.xcdatamodeld */,
 			);
 			path = EventTracker;
+			sourceTree = "<group>";
+		};
+		F6D4DFD71DB342B60068A7EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F6D4DFD81DB3431A0068A7EB /* KWEventListViewController.swift */,
+				F6D4E02A1DB49ABC0068A7EB /* KWEventTrackedListViewController.swift */,
+				F6D4E0341DB4AB740068A7EB /* KWDetailViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F6D4DFDE1DB349440068A7EB /* CoreDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				F6D4E0381DB4F6120068A7EB /* User+CoreDataProperties.swift */,
+				F6D4E0391DB4F6120068A7EB /* User.swift */,
+				F6D4E03A1DB4F6120068A7EB /* Event+CoreDataProperties.swift */,
+				F6D4E03B1DB4F6120068A7EB /* Event.swift */,
+			);
+			name = CoreDataModels;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F6D4DFE51DB367DB0068A7EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6D4DFE61DB368040068A7EB /* EventModel.swift */,
+				F6D4E0361DB4E5F40068A7EB /* DatabaseManager.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +197,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6D4DFCB1DB33C140068A7EB /* EventTracker.xcdatamodeld in Sources */,
+				F6D4DFD91DB3431A0068A7EB /* KWEventListViewController.swift in Sources */,
 				F6D4DFC51DB33C140068A7EB /* ViewController.swift in Sources */,
+				F6D4E0351DB4AB740068A7EB /* KWDetailViewController.swift in Sources */,
+				F6D4E0371DB4E5F40068A7EB /* DatabaseManager.swift in Sources */,
+				F6D4DFE71DB368040068A7EB /* EventModel.swift in Sources */,
+				F6D4E03E1DB4F6120068A7EB /* Event+CoreDataProperties.swift in Sources */,
+				F6D4E0271DB4797C0068A7EB /* LeftViewController.swift in Sources */,
+				F6D4E03C1DB4F6120068A7EB /* User+CoreDataProperties.swift in Sources */,
+				F6D4E03D1DB4F6120068A7EB /* User.swift in Sources */,
 				F6D4DFC31DB33C140068A7EB /* AppDelegate.swift in Sources */,
+				F6D4E02B1DB49ABC0068A7EB /* KWEventTrackedListViewController.swift in Sources */,
+				F6D4E03F1DB4F6120068A7EB /* Event.swift in Sources */,
+				F6D4E0251DB4797C0068A7EB /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +359,7 @@
 				F6D4DFD61DB33C140068A7EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
