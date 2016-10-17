@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     var eventsModelArray = [EventModel]()
     var alert:UIAlertController?
     
+    var movePanel:((movePanel:Bool) ->Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,9 +26,12 @@ class ViewController: UIViewController {
             saveEvent(event)
         }
         
-        addName()
+//        addName()
     }
 
+    @IBAction func slideButtonClicked(sender: UIBarButtonItem) {
+        movePanel!(movePanel: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
