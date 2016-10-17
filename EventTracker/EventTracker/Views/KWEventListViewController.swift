@@ -16,6 +16,8 @@ class KWEventListViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         events = DatabaseManager.sharedManager.fetchEvents()!
+        
+        tableView.tableFooterView = UIView()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
